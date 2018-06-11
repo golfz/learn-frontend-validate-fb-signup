@@ -25,3 +25,7 @@ nav {
 #fb-title-pic h3 {
   margin-bottom: 1em;
 }
+
+#form-login label {
+  display: inline;
+}
