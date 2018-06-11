@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Day: 4 / Workshop 1</title>
+
+  <!-- 3rd party css \-->
+  <link rel="stylesheet" type="text/css" href="3rd/bootstrap/css/bootstrap.min.css">
+
+  <!-- 3rd party js -->
+  <script src="3rd/jquery.js"></script>
+  <script src="3rd/popper.min.js"></script>
+  <script src="3rd/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- own css -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+  <nav class="bg-primary" style="margin-bottom: 2em;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-4 col-sm-12">
+          <h1 class="text-white text-md-left text-center logo-text">facebook</h1>
+        </div>
+        <div class="col-lg-6 col-md-8 d-none d-md-block">
+          <form action="/">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="loginUsername" style="color: white">อีเมล์หรือโทรศัพท์</label>
+                  <input id="loginUsername" type="text" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="loginPassword" style="color: white">รหัสผ่าน</label>
+                  <input id="loginPassword" type="password" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <button id="loginBtn" class="btn btn-small btn-primary" style="color: white; margin-top: 1.9em">เข้าสู่ระบบ</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container d-block d-md-none" style="margin-top: 2em;">
+    <form action="/">
+      <div class="form-group">
+        <label for="loginUsername">ป้อนอีเมล์หรือหมายเลขโทรศัพท์</label>
+        <input id="loginUsername" type="text" class="form-control">
+      </div>
+      <button id="loginBtn" class="btn btn-lg btn-primary" style="color: white; width: 100%;">เข้าสู่ระบบ</button>
+      <div class="form-group">
+      </div>
+    </form>
+    <hr>
+    <div style="text-align: center; position: relative; top: -30px;">
+      <span style="padding: 5px; background-color: white">หรือ</span>
+    </div>
+  </div>
+
+  <!-- register -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div id="fb-title-pic" class="d-none d-lg-block">
+          <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, officia doloribus et.</h3>
+          <img src="img/fblink.jpg">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="container">
+          <h1 class="d-none d-md-block">สมัครใช้งาน</h1>
+          <h5 class="d-none d-md-block">สมัครฟรีไม่มีค่าใช้จ่าย</h5>
+        </div>
+
+        <div class="container" style="margin-top: 1.5em;">
+          <!-- Form : Register        -->
+          <form id="regisForm" class="needs-validation" action="index.html" method="post" novalidate>
+            <div class="row" style="margin-bottom: 15px">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="ชื่อ" required>
+                <div class="invalid-feedback">
+                  กรุณากรอกชื่อของคุณ
+                </div>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="นามสกุล" required>
+                <div class="invalid-feedback">
+                  กรุณากรอกชื่อของคุณ
+                </div>
+              </div>
+            </div>
+            <div class="form-group d-none d-md-block">
+              <input type="email" class="form-control" placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล" required>
+              <div class="invalid-feedback">
+                อีเมล์ไม่ถูกต้อง
+              </div>
+            </div>
+            <div class="form-group d-none d-md-block">
+              <input type="password" class="form-control" placeholder="รหัสผ่าน" minlength="6" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+              <div class="invalid-feedback">
+                รหัสผ่านไม่เหมาะสม (ยาวอย่างน้อย 8 ตัวอักษร/ใช้อักษรพิมพ์เล็ก พิมพ์ใหญ่ อักขระพิเศษ ตัวเลข)
+              </div>
+            </div>
+            <div class="form-group d-none d-md-block">
+              <label>วันเกิด</label>
+              <div class="form-group form-inline">
+                <select class="form-control margin-right-xs">
+            <option value="1">17</option>
+          </select>
+                <select class="form-control margin-right-xs">
+            <option value="1">มี.ค.</option>
+          </select>
+                <select class="form-control margin-right-sm">
+            <option value="1">1993</option>
+          </select>
+                <small>Lorem ipsum dolor sit amet.</small>
+              </div>
+            </div>
+            <div class="d-none d-md-block">
+              <div class="form-group form-inline ">
+                <div class="form-check margin-right-sm">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                  <label class="form-check-label" for="exampleRadios1">หญิง</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">ชาย</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group d-none d-md-block">
+              <small>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quasi perspiciatis amet officiis? Nisi repudiandae, pariatur fuga libero quaerat quidem veniam quod esse molestiae maxime rerum nobis sunt deleniti similique.
+      </small>
+            </div>
+
+            <div class="form-group">
+              <button id="regBtn" type="submit" class="btn btn-lg btn-success">สร้างบัญชีผู้ใช้</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end register -->
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
